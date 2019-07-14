@@ -45,7 +45,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="#af0000"
+                    android:background="@drawable/btn_rounded_red"
                     android:onClick="playSound"
 
                     android:text="Placeholder"
@@ -61,7 +61,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="#b54c01"
+                    android:background="@drawable/btn_rounded_orange"
                     android:onClick="playSound"
                     android:text="Placeholder"
                     android:textColor="@android:color/white"
@@ -86,7 +86,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="#d6a208"
+                    android:background="@drawable/btn_rounded_yellowgold"
                     android:onClick="playSound"
 
                     android:text="Placeholder"
@@ -104,7 +104,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="#1b5e20"
+                    android:background="@drawable/btn_rounded_green"
 
 
                     android:onClick="playSound"
@@ -126,7 +126,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="#037f71"
+                    android:background="@drawable/btn_rounded_replay"
                     android:fontFamily="sans-serif-smallcaps"
                     android:onClick="playSound"
                     android:text="Replay"
