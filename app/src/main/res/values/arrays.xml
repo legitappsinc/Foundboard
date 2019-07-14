@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="labels">
+        <item>A Door Knocking</item>
+        <item>Heavy Rain</item>
+        <item>Morse Code</item>
+        <item>A Spaceship</item>
+    </string-array>
+
+    <integer-array name="ids">
+        <item>@raw/doorknock</item>
+        <item>@raw/heavyrain</item>
+        <item>@raw/morsecode</item>
+        <item>@raw/spaceship</item>
+    </integer-array>
+</resources>
