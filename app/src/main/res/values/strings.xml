@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Foundboard</string>
+    <string-array name="text">
+        <item>Like the video</item>
+        <item>Subscribe to the channel</item>
+    </string-array>
 </resources>
