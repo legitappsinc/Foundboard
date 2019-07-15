@@ -14,8 +14,6 @@ public class info extends AppCompatActivity {
         setContentView(R.layout.activity_info);
     }
 
-    public void onBackPress(View view){
-        setContentView(R.layout.activity_start_screen);
-    }
+
 
 }

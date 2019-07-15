@@ -26,7 +26,8 @@ public class StartScreen extends AppCompatActivity {
         finish();
     }
     public void onInfoPress(View v){
-        setContentView(R.layout.activity_info);
+        Intent intent2 = new Intent(this, info.class);
+        startActivity(intent2);
     }
 
 }
