@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onStart();
 
+
+        //Use loops to do this repeatedly
         int list[] =
                 {R.raw.doorknock, R.raw.heavyrain, R.raw.morsecode, R.raw.spaceship};
         Random r = new Random();

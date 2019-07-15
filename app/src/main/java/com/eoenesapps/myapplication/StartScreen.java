@@ -26,7 +26,7 @@ public class StartScreen extends AppCompatActivity {
         finish();
     }
     public void onInfoPress(View v){
-        // setContentView(R.layout.activity_info); -Doesn't exist yet
+        setContentView(R.layout.activity_info);
     }
 
 }
