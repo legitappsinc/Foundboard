@@ -50,7 +50,7 @@
             android:textColor="@android:color/white"
             android:background="#fc200c"
             android:layout_margin="20dp"
-            android:onClick="onBackPress"
+            android:on="onBackPress"
             />
 
 

@@ -14,9 +14,8 @@ public class info extends AppCompatActivity {
         setContentView(R.layout.activity_info);
     }
 
-    public void onBackPress(View v){
-        Intent intent2 = new Intent(this, StartScreen.class);
-        startActivity(intent2);
+    public void onBackPress(View view){
+        setContentView(R.layout.activity_start_screen);
     }
 
 }
