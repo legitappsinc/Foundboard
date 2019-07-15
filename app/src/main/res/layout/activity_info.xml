@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
-            android:textSize="33dp"
+            android:textSize="28sp"
             android:text="In Foundboard the objective is simple, get as many correct sounds in a row as you can.  Foundboard was made by EOENES Apps, greenpizza55 and Luke. Thanks for reading the info about our app. May the best listener win!
 "
             android:fontFamily="serif"

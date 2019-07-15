@@ -2,6 +2,7 @@ package com.eoenesapps.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -14,7 +15,8 @@ public class info extends AppCompatActivity {
     }
 
     public void onBackPress(View v){
-        setContentView(R.layout.activity_start_screen);
+        Intent intent2 = new Intent(this, StartScreen.class);
+        startActivity(intent2);
     }
 
 }
