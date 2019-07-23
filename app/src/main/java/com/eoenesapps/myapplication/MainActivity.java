@@ -15,6 +15,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.Random;
@@ -112,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
         chosenButtonB.setText(list2[randomNumber2]);
         chosenButtonC.setText(list2[randomNumber3]);
         chosenButtonD.setText(list2[randomNumber4]);
+
 
 
         //Media Player Object
