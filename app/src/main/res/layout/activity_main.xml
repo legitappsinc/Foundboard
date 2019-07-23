@@ -41,23 +41,21 @@
 
                 <Button
                     android:id="@+id/buttonA"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_rounded_red"
-
-
                     android:text="Placeholder"
                     android:textColor="@android:color/white"
                     android:textSize="18dp"
 
+
+
                     />
-
-
                 <Button
                     android:id="@+id/buttonB"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
@@ -71,7 +69,7 @@
             </TableRow>
 
 
-            //Leave this button in as it fixes the layout for whatever reason.
+            <!--Leave this button in as it fixes the layout for whatever reason. /> </!-->
 
             <TableRow
                 android:layout_width="wrap_content"
@@ -81,7 +79,7 @@
                 <Button
 
                     android:id="@+id/buttonC"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
@@ -97,7 +95,7 @@
                 <Button
                     android:id="@+id/buttonD"
                     style="@style/TextAppearance.AppCompat.Button"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"

@@ -38,10 +38,9 @@
             android:gravity="center"
             android:maxLines="400"
             android:scrollbars="vertical"
-            android:text="In Foundboard the objective is simple, get as many correct sounds in a row as you can.  Foundboard was made by EOENES Apps, greenpizza55 and Luke. Thanks for reading the info about our app. May the best listener win!
-"
+            android:text="In Foundboard the objective is simple, get as many correct sounds in a row as you can.  Foundboard was made by EOENES Apps, greenpizza55 and Luke. Thanks for reading the info about our app. May the best listener win!"
             android:textColor="@android:color/white"
-            android:textSize="33sp" />
+            android:textSize="30sp" />
 
 
 
