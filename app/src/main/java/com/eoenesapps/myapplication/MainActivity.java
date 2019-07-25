@@ -1,23 +1,15 @@
 package com.eoenesapps.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.LinearLayoutCompat;
-
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
-import android.media.*;
 
-import java.lang.reflect.Array;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,30 +24,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     int list[] =
-        {R.raw.doorknock, R.raw.heavyrain, R.raw.morsecode, R.raw.spaceship};
+            {R.raw.doorknock, R.raw.heavyrain, R.raw.morsecode, R.raw.spaceship};
     Random r = new Random();
     //String myArray[] = getResources().getStringArray(R.array.ids);
-    //tried to use the array in raw arrays.xml but it wouldnt convert
+    //tried to use the array in raw arrays.xml but it wouldn't convert
     int randomNumber = r.nextInt(list.length);
+    static int i;
+    static String i2;
+    static int score;
+    public boolean gameOver;
 
-
-
-    protected void onStart()
-    {
+    protected void onStart() {
         super.onStart();
-        
-    
+
+        //Keeps loop running
+
+        gameOver = false;
+
 
         //Use loops to do this repeatedly
-        
+
         String list2[] =
                 {"Door Knocking", "Heavy Rain", "Morse Code", "Spaceship"};
         int scoreKeeper;
 
-        Button buttonA = findViewById(R.id.buttonA);
-        Button buttonB = findViewById(R.id.buttonB);
-        Button buttonC = findViewById(R.id.buttonC);
-        Button buttonD = findViewById(R.id.buttonD);
+        final Button buttonA = findViewById(R.id.buttonA);
+        final Button buttonB = findViewById(R.id.buttonB);
+        final Button buttonC = findViewById(R.id.buttonC);
+        final Button buttonD = findViewById(R.id.buttonD);
 
 
         int list[] =
@@ -67,26 +63,28 @@ public class MainActivity extends AppCompatActivity {
         integerArrayList2.add(R.raw.morsecode);
         integerArrayList2.add(R.raw.spaceship);
         Collections.shuffle(integerArrayList2); */
-        
-        
-        
+
+
         Random r = new Random();
         //String myArray[] = getResources().getStringArray(R.array.ids);
         //tried to use the array in raw arrays.xml but it wouldn't convert
         int randomNumber = r.nextInt(list2.length);
         int randomNumber2 = r.nextInt(list2.length);
-        int randomNumber3= r.nextInt(list2.length);
+        int randomNumber3 = r.nextInt(list2.length);
         int randomNumber4 = r.nextInt(list2.length);
 
-        while(randomNumber2 == randomNumber || randomNumber2 == randomNumber3 || randomNumber2 == randomNumber4)
-        {randomNumber2 = r.nextInt(list2.length);}
-        
-        
-        while(randomNumber3 == randomNumber || randomNumber3 == randomNumber2 || randomNumber3 == randomNumber4)
-        {randomNumber3 = r.nextInt(list2.length);}
-        
-        while(randomNumber4 == randomNumber || randomNumber4 == randomNumber2 || randomNumber4 == randomNumber3)
-        {randomNumber4 = r.nextInt(list2.length);}
+        while (randomNumber2 == randomNumber || randomNumber2 == randomNumber3 || randomNumber2 == randomNumber4) {
+            randomNumber2 = r.nextInt(list2.length);
+        }
+
+
+        while (randomNumber3 == randomNumber || randomNumber3 == randomNumber2 || randomNumber3 == randomNumber4) {
+            randomNumber3 = r.nextInt(list2.length);
+        }
+
+        while (randomNumber4 == randomNumber || randomNumber4 == randomNumber2 || randomNumber4 == randomNumber3) {
+            randomNumber4 = r.nextInt(list2.length);
+        }
 
         ArrayList<Button> arrayList = new ArrayList<>();
         arrayList.add(buttonA);
@@ -95,10 +93,10 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add(buttonD);
         Collections.shuffle(arrayList);
         //Chosen button A is the button used in the main activity, completley random
-        Button chosenButtonA = arrayList.get(0);
-        Button chosenButtonB = arrayList.get(1);
-        Button chosenButtonC = arrayList.get(2);
-        Button chosenButtonD = arrayList.get(3);
+        final Button chosenButtonA = arrayList.get(0);
+        final Button chosenButtonB = arrayList.get(1);
+        final Button chosenButtonC = arrayList.get(2);
+        final Button chosenButtonD = arrayList.get(3);
 
 
         /*
@@ -106,40 +104,96 @@ public class MainActivity extends AppCompatActivity {
          */
 
 
-
-
         //Sets the button text
+
+
         chosenButtonA.setText(list2[randomNumber]);
         chosenButtonB.setText(list2[randomNumber2]);
         chosenButtonC.setText(list2[randomNumber3]);
         chosenButtonD.setText(list2[randomNumber4]);
 
 
+        //Statements to decide if the button pressed is the correct button
+
 
         //Media Player Object
 
-        int i = list[randomNumber];
+        i = list[randomNumber];
+        i2 = list2[randomNumber];
         MediaPlayer mp = MediaPlayer.create(this, i); //Placeholder file, change heavyrain to change what sound file it's playing
         List<Integer> integerArrayList = new ArrayList<>();
         integerArrayList.add(list[randomNumber]);
         mp.start();
 
 
+        while (gameOver = false) {
+
+            View.OnClickListener myOnClickListener = new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    switch (view.getId()) {
+                        case R.id.buttonA:
+
+                            if (buttonA.getText() == i2) {
+                                score++;
+
+                            } else {
+                                setContentView(R.layout.activity_take_the_luke);
+                                //gameOver == true;
+                                gameOver = true;
+                            }
+
+                            break;
+                        case R.id.buttonB:
+                            if (buttonB.getText() == i2) {
+                                score++;
+
+                            } else {
+                                setContentView(R.layout.activity_take_the_luke);
+                                //gameOver == true;
+                                gameOver = true;
+                            }
+                            break;
+                        case R.id.buttonC:
+                            if (buttonC.getText() == i2) {
+                                score++;
+
+                            } else {
+                                setContentView(R.layout.activity_take_the_luke);
+                                //gameOver == true;
+                                gameOver = true;
+                            }
+                            break;
+                        case R.id.buttonD:
+                            if (buttonD.getText() == i2) {
+                                score++;
+
+                            } else {
+                                setContentView(R.layout.activity_take_the_luke);
+                                //gameOver == true;
+                                gameOver = true;
+                            }
+                            break;
+                        default:
+                            break;
+
+
+                    }
+
+                }
+            };
+
+            //do bad stuff
+        }
     }
-
-
-
 
     public void playSound(View v) {
         //Place music files in file called raw, then after that the name of the file
-       MediaPlayer mp = MediaPlayer.create(this, list[randomNumber]); //Placeholder file, change heavyrain to change what sound file it's playing
-       mp.start();
-
-   }
+        MediaPlayer mp = MediaPlayer.create(this, i); //Placeholder file, change heavyrain to change what sound file it's playing
+        mp.start();
 
 
-
-
+    }
 }
 
 

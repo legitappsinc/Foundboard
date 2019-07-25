@@ -12,8 +12,10 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".info"></activity>
+        tools:ignore="GoogleAppIndexingWarning"
+        >
+        <activity android:name=".takeTheLuke"></activity>
+        <activity android:name=".info" />
         <activity android:name=".MainActivity" />
         <activity android:name=".StartScreen">
             <intent-filter>
