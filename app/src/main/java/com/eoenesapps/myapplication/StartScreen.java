@@ -30,4 +30,9 @@ public class StartScreen extends AppCompatActivity {
         startActivity(intent2);
     }
 
+    public void onHighScorePress(View v){
+        Intent intentgameover = new Intent(this, takeTheLuke.class);
+        startActivity(intentgameover);
+    }
+
 }

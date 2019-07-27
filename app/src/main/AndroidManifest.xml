@@ -7,9 +7,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/icon"
+        android:icon="@drawable/ic_surround_sound_light_blue_600_36dp"
         android:label="Foundboard"
-        android:roundIcon="@drawable/icon"
+        android:roundIcon="@drawable/ic_surround_sound_light_blue_600_36dp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"

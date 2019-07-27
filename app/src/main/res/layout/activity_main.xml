@@ -51,8 +51,6 @@
                     android:textSize="18dp"
 
 
-
-
                     />
                 <Button
                     android:id="@+id/buttonB"

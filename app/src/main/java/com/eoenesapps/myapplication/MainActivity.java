@@ -1,10 +1,12 @@
 package com.eoenesapps.myapplication;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -12,7 +14,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
     }
+
 
     int list[] =
             {R.raw.doorknock, R.raw.heavyrain, R.raw.morsecode, R.raw.spaceship};
@@ -47,11 +50,15 @@ public class MainActivity extends AppCompatActivity {
         String list2[] =
                 {"Door Knocking", "Heavy Rain", "Morse Code", "Spaceship"};
         int scoreKeeper;
-
-        final Button buttonA = findViewById(R.id.buttonA);
-        final Button buttonB = findViewById(R.id.buttonB);
-        final Button buttonC = findViewById(R.id.buttonC);
-        final Button buttonD = findViewById(R.id.buttonD);
+        //Sets onClickListeners for each button
+        Button buttonA = (Button) findViewById(R.id.buttonA);
+        buttonA.setOnClickListener(this);
+        Button buttonB = (Button) findViewById(R.id.buttonB);
+        buttonB.setOnClickListener(this);
+        Button buttonC = (Button) findViewById(R.id.buttonC);
+        buttonC.setOnClickListener(this);
+        Button buttonD = (Button) findViewById(R.id.buttonD);
+        buttonD.setOnClickListener(this);
 
 
         int list[] =
@@ -93,10 +100,10 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add(buttonD);
         Collections.shuffle(arrayList);
         //Chosen button A is the button used in the main activity, completley random
-        final Button chosenButtonA = arrayList.get(0);
-        final Button chosenButtonB = arrayList.get(1);
-        final Button chosenButtonC = arrayList.get(2);
-        final Button chosenButtonD = arrayList.get(3);
+        Button chosenButtonA = arrayList.get(0);
+        Button chosenButtonB = arrayList.get(1);
+        Button chosenButtonC = arrayList.get(2);
+        Button chosenButtonD = arrayList.get(3);
 
 
         /*
@@ -126,74 +133,87 @@ public class MainActivity extends AppCompatActivity {
         mp.start();
 
 
-        while (gameOver = false) {
-
-            View.OnClickListener myOnClickListener = new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    switch (view.getId()) {
-                        case R.id.buttonA:
-
-                            if (buttonA.getText() == i2) {
-                                score++;
-
-                            } else {
-                                setContentView(R.layout.activity_take_the_luke);
-                                //gameOver == true;
-                                gameOver = true;
-                            }
-
-                            break;
-                        case R.id.buttonB:
-                            if (buttonB.getText() == i2) {
-                                score++;
-
-                            } else {
-                                setContentView(R.layout.activity_take_the_luke);
-                                //gameOver == true;
-                                gameOver = true;
-                            }
-                            break;
-                        case R.id.buttonC:
-                            if (buttonC.getText() == i2) {
-                                score++;
-
-                            } else {
-                                setContentView(R.layout.activity_take_the_luke);
-                                //gameOver == true;
-                                gameOver = true;
-                            }
-                            break;
-                        case R.id.buttonD:
-                            if (buttonD.getText() == i2) {
-                                score++;
-
-                            } else {
-                                setContentView(R.layout.activity_take_the_luke);
-                                //gameOver == true;
-                                gameOver = true;
-                            }
-                            break;
-                        default:
-                            break;
+    }
 
 
+
+    @Override
+    public void onClick(View v) {
+        Button buttonA = (Button) findViewById(R.id.buttonA);
+        buttonA.setOnClickListener(this);
+        Button buttonB = (Button) findViewById(R.id.buttonB);
+        buttonB.setOnClickListener(this);
+        Button buttonC = (Button) findViewById(R.id.buttonC);
+        buttonC.setOnClickListener(this);
+        Button buttonD = (Button) findViewById(R.id.buttonD);
+        buttonD.setOnClickListener(this);
+        switch (v.getId()) {
+
+            case R.id.buttonA:
+                if (buttonA.getText() == i2) {
+                    score++;}
+
+                else{
+                        Intent intent = new Intent(this, takeTheLuke.class);
+                        startActivity(intent);
                     }
+                    break;
 
+                    case R.id.buttonB:
+                        if (buttonB.getText()==i2) {
+                            score++;
+
+                        } else {
+                            Intent intent = new Intent(this, takeTheLuke.class);
+                            startActivity(intent);
+                        }
+                        break;
+
+                    case R.id.buttonC:
+                        if (buttonC.getText()==i2) {
+                            score++;
+
+                        } else {
+                            Intent intent = new Intent(this, takeTheLuke.class);
+                            startActivity(intent);
+                        }
+                        break;
+                    case R.id.buttonD:
+                        if (buttonD.getText()==i2) {
+                            score++;
+
+                        } else {
+                            Intent intent = new Intent(this, takeTheLuke.class);
+                            startActivity(intent);
+                        }
+                        break;
+                    default:
+                        break;
                 }
-            };
-
-            //do bad stuff
         }
+
+
+
+    public void playSound(View v) {//Place music files in file called raw, then after that the name of the file
+        MediaPlayer mp2 = MediaPlayer.create(this, i); //Placeholder file, change heavyrain to change what sound file it's playing
+        mp2.start(); }
+
+    /*public void onButtonPress(View view){
+
+        if (.getText() == i2) {
+            score++;}
+        else{
+            Intent intent = new Intent(this,takeTheLuke.class);
+            startActivity(intent);
     }
-
-    public void playSound(View v) {
-        //Place music files in file called raw, then after that the name of the file
-        MediaPlayer mp = MediaPlayer.create(this, i); //Placeholder file, change heavyrain to change what sound file it's playing
-        mp.start();
+}*/
 
 
-    }
+
+
+
+
+
 }
 
 
