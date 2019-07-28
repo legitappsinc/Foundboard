@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportActionBar().hide();
+
+
 
 
         setContentView(R.layout.activity_main);
@@ -156,38 +158,51 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-            //Detirm if button's been pressed or not
+            //Determine if button's been pressed or not
             switch (v.getId()) {
 
                 case R.id.buttonA:
                     if (buttonA.getText() == i2) {
-                        score++;
+                        score+=1;
+                        TextView textView = findViewById(R.id.score);
+                        textView.setText(Integer.toString(score));
+
                         placeHolder();
+
                     } else {
                         Intent intent = new Intent(this, takeTheLuke.class);
                         startActivity(intent);
                         mediaPlayer.stop();
                         mediaPlayer.release();
+                        score = 0;
 
                     }
                     break;
 
                 case R.id.buttonB:
                     if (buttonB.getText() == i2) {
-                        score++;
+                        score+=1;
+                        TextView textView = findViewById(R.id.score);
+                        textView.setText(Integer.toString(score));
+
                         placeHolder();
+
 
                     } else {
                         Intent intent = new Intent(this, takeTheLuke.class);
                         startActivity(intent);
                         mediaPlayer.stop();
                         mediaPlayer.release();
+                        score = 0;
                     }
                     break;
 
                 case R.id.buttonC:
                     if (buttonC.getText() == i2) {
-                        score++;
+                        score+=1;
+                        TextView textView = findViewById(R.id.score);
+                        textView.setText(Integer.toString(score));
+
                         placeHolder();
 
                     } else {
@@ -195,11 +210,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(intent);
                         mediaPlayer.stop();
                         mediaPlayer.release();
+                        score = 0;
                     }
                     break;
                 case R.id.buttonD:
                     if (buttonD.getText() == i2) {
-                        score++;
+                        score+=1;
+                        TextView textView = findViewById(R.id.score);
+                        textView.setText(Integer.toString(score));
+
                         placeHolder();
 
                     } else {
@@ -207,6 +226,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(intent);
                         mediaPlayer.stop();
                         mediaPlayer.release();
+                        score = 0;
                     }
                     break;
                 default:
