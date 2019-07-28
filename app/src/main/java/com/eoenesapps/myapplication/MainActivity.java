@@ -54,10 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         gameOver = false;
 
 
-
-
-
-
         //Use loops to do this repeatedly
 
 
@@ -72,9 +68,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button buttonD = (Button) findViewById(R.id.buttonD);
         buttonD.setOnClickListener(this);
 
-
-        int list[] =
-                {R.raw.doorknock, R.raw.heavyrain, R.raw.morsecode, R.raw.spaceship};
         
        /* ArrayList<Integer> integerArrayList2 = new ArrayList<>();
         integerArrayList2.add(R.raw.doorknock);
@@ -169,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if (buttonA.getText() == i2) {
                         score+=1;
                         TextView textView = findViewById(R.id.score);
-                        textView.setText(Integer.toString(score));
+                        textView.setText("Score: " + Integer.toString(score));
 
                         placeHolder();
 
@@ -187,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if (buttonB.getText() == i2) {
                         score+=1;
                         TextView textView = findViewById(R.id.score);
-                        textView.setText(Integer.toString(score));
+                        textView.setText("Score: " + Integer.toString(score));
 
                         placeHolder();
 
@@ -205,7 +198,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if (buttonC.getText() == i2) {
                         score+=1;
                         TextView textView = findViewById(R.id.score);
-                        textView.setText(Integer.toString(score));
+                        textView.setText("Score: " + Integer.toString(score));
 
                         placeHolder();
 
@@ -221,7 +214,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if (buttonD.getText() == i2) {
                         score+=1;
                         TextView textView = findViewById(R.id.score);
-                        textView.setText(Integer.toString(score));
+                        textView.setText("Score: " + Integer.toString(score));
 
                         placeHolder();
 

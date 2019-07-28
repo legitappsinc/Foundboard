@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static com.eoenesapps.myapplication.MainActivity.score;
+
 public class takeTheLuke extends AppCompatActivity {
 
     @Override
@@ -33,6 +35,8 @@ public class takeTheLuke extends AppCompatActivity {
                 ImageView imageView = findViewById(R.id.gameOverImage);
                 imageView.setVisibility(View.VISIBLE);
             }
+        TextView finalscore = findViewById(R.id.finalScoreText);
+        finalscore.setText("Final Score: " + Integer.toString(score));
     }
 
     public void takeTheLukePerra(View view){
@@ -42,3 +46,4 @@ public class takeTheLuke extends AppCompatActivity {
 
     }
 }
+
