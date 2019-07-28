@@ -122,7 +122,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_rounded_replay"
                     android:fontFamily="sans-serif-smallcaps"
-                    android:onClick="playSound"
+                    android:onClick="replayButton"
                     android:text="Replay"
                     android:textColor="@android:color/white"
                     android:textSize="36dp" />

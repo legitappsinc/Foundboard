@@ -39,10 +39,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     static int score;
     public boolean gameOver;
     MediaPlayer mediaPlayer;
+    public static int replayCounter = 4;
 
     protected void onStart() {
+        replayCounter=4;
         score = 0;
         super.onStart();
+
+        Button buttonreplay = findViewById(R.id.buttonReplay);
+        buttonreplay.setText("Replay x5");
 
         //Keeps loop running
 
@@ -227,9 +232,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
+    public void replayButton(View v){
 
+        Button button = findViewById(R.id.buttonReplay);
+        button.setText("Replay x" + replayCounter);
+        if(replayCounter!=0){
+            replayCounter-=1;
+            playSound();
+    }
+    else{
+            button.setText("No Replays Left :(");
+        }
+    }
 
-    public void playSound(View v) {
+    public void playSound() {
         mediaPlayer.stop();
         mediaPlayer.release();
         //Place music files in file called raw, then after that the name of the file

@@ -43,20 +43,23 @@
             android:onClick="onStartPress"
             android:textStyle="bold"
             android:padding="10dp"/>
+
         <Button
+            android:id="@+id/highScore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="56dp"
-            android:text="High Score"
-            android:fontFamily="sans-serif-smallcaps"
             android:layout_below="@+id/startbtn"
-            android:layout_margin="20dp"
-            android:textColor="@android:color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:background="@android:color/holo_green_dark"
-            android:id="@+id/highScore"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
             android:padding="10dp"
-            />
+            android:text="High Scores"
+            android:textColor="@android:color/white"
+            android:textSize="56dp"
+            android:textStyle="bold" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

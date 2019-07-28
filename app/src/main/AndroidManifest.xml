@@ -13,11 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".highscore"></activity>
-        <activity android:name=".takeTheLuke" />
-        <activity android:name=".info" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".StartScreen">
+        <activity
+            android:name=".highscore"
+            android:screenOrientation="sensorPortrait" />
+        <activity android:name=".takeTheLuke"
+            android:screenOrientation="sensor"
+            />
+        <activity android:name=".info"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="sensor"
+            />
+        <activity android:name=".StartScreen"
+            android:screenOrientation="sensorPortrait"
+            >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
