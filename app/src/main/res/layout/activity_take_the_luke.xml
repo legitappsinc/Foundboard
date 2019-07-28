@@ -40,12 +40,15 @@
             android:layout_margin="20dp"/>
 
         <TextView
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
             android:id="@+id/finalScoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="false"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
             android:layout_marginTop="50sp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="sans-serif-smallcaps"
             android:padding="20dp"
             android:text="Failed to obtain final score"
             android:textColor="@android:color/white"
