@@ -217,7 +217,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    public void playSound(View v) {//Place music files in file called raw, then after that the name of the file
+    public void playSound(View v) {
+        mediaPlayer.stop();
+        mediaPlayer.release();
+        //Place music files in file called raw, then after that the name of the file
          mediaPlayer = MediaPlayer.create(this, i); //Placeholder file, change heavyrain to change what sound file it's playing
         mediaPlayer.start(); }
 
