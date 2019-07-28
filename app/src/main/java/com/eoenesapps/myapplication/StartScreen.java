@@ -5,8 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
-public class StartScreen extends AppCompatActivity {
+public class StartScreen extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +31,17 @@ public class StartScreen extends AppCompatActivity {
         startActivity(intent2);
     }
 
-    public void onHighScorePress(View v){
-        Intent intentgameover = new Intent(this, takeTheLuke.class);
-        startActivity(intentgameover);
-    }
+   public void onHighScorePress(View view){
+        Intent intent3 = new Intent(this,highscore.class);
+        startActivity(intent3);
 
-}
+   }
+
+
+
+  }
+
+
+
+
+

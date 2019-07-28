@@ -58,7 +58,8 @@
             android:text="High Score"
             android:textColor="@android:color/white"
             android:textSize="36sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:onClick="onHighScorePress"/>
 
         <Button
             android:id="@+id/info"

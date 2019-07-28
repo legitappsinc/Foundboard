@@ -12,9 +12,9 @@
         android:roundIcon="@drawable/ic_surround_sound_light_blue_600_36dp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
-        >
-        <activity android:name=".takeTheLuke"></activity>
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".highscore"></activity>
+        <activity android:name=".takeTheLuke" />
         <activity android:name=".info" />
         <activity android:name=".MainActivity" />
         <activity android:name=".StartScreen">

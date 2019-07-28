@@ -29,8 +29,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    int list[] =
+    public int list[] =
             {R.raw.doorknock, R.raw.heavyrain, R.raw.morsecode, R.raw.spaceship};
+    public String list2[] =
+            {"Door Knocking", "Heavy Rain", "Morse Code", "Spaceship"};
+
+
     Random r = new Random();
     //String myArray[] = getResources().getStringArray(R.array.ids);
     //tried to use the array in raw arrays.xml but it wouldn't convert
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MediaPlayer mediaPlayer;
 
     protected void onStart() {
+        score = 0;
         super.onStart();
 
         //Keeps loop running
@@ -55,8 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //Use loops to do this repeatedly
 
-        String list2[] =
-                {"Door Knocking", "Heavy Rain", "Morse Code", "Spaceship"};
+
         int scoreKeeper;
         //Sets onClickListeners for each button
         Button buttonA = (Button) findViewById(R.id.buttonA);
@@ -174,7 +178,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(intent);
                         mediaPlayer.stop();
                         mediaPlayer.release();
-                        score = 0;
+
 
                     }
                     break;
@@ -193,7 +197,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(intent);
                         mediaPlayer.stop();
                         mediaPlayer.release();
-                        score = 0;
+
                     }
                     break;
 
@@ -210,7 +214,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(intent);
                         mediaPlayer.stop();
                         mediaPlayer.release();
-                        score = 0;
+
                     }
                     break;
                 case R.id.buttonD:
@@ -226,7 +230,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(intent);
                         mediaPlayer.stop();
                         mediaPlayer.release();
-                        score = 0;
+
                     }
                     break;
                 default:
@@ -244,11 +248,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          mediaPlayer = MediaPlayer.create(this, i); //Placeholder file, change heavyrain to change what sound file it's playing
         mediaPlayer.start(); }
 
-    public void placeHolder() {
+    public void placeHolder() { //Causes the app to function more than once
         mediaPlayer.stop();
         mediaPlayer.release();
-        String list2[] =
-                {"Door Knocking", "Heavy Rain", "Morse Code", "Spaceship"};
+
         int scoreKeeper;
         //Sets onClickListeners for each button
         Button buttonA = (Button) findViewById(R.id.buttonA);
@@ -260,9 +263,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button buttonD = (Button) findViewById(R.id.buttonD);
         buttonD.setOnClickListener(this);
 
-
-        int list[] =
-                {R.raw.doorknock, R.raw.heavyrain, R.raw.morsecode, R.raw.spaceship};
 
 
         Random r = new Random();
