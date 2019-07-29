@@ -9,6 +9,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.transition.Slide;
+import android.transition.Transition;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -22,8 +25,14 @@ public class StartScreen extends AppCompatActivity{
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_start_screen);
-    }
 
+
+    }
+    public void onSettingsPress(View v)
+    {
+        Intent i = new Intent(this, SettingsActivity.class);
+        startActivity(i);
+    }
     public void onStartPress(View v)
     {
         Intent intent = new Intent(this, MainActivity.class);

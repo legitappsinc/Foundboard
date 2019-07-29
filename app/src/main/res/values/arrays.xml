@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="labels">
-        <item>A Door Knocking</item>
-        <item>Heavy Rain</item>
-        <item>Morse Code</item>
-        <item>A Spaceship</item>
+    <string-array name="listArray">
+        <item>Headings</item>
+        <item>Headings and Details</item>
+        <item>All Data</item>
     </string-array>
 
-    <integer-array name="ids">
-        <item>@raw/doorknock</item>
-        <item>@raw/heavyrain</item>
-        <item>@raw/morsecode</item>
-        <item>@raw/spaceship</item>
-    </integer-array>
+    <string-array name="listValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
 </resources>
