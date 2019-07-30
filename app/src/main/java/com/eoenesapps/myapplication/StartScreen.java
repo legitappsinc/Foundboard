@@ -47,7 +47,8 @@ public class StartScreen extends AppCompatActivity{
                 Html.fromHtml("<font color='#FF0000'>Exit this great app</font>"),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                            finish();
+                            moveTaskToBack(true);
+                            finishAndRemoveTask();
                             System.exit(0);
                             dialog.cancel();
                     }
@@ -84,6 +85,8 @@ public class StartScreen extends AppCompatActivity{
         startActivity(intent3);
 
    }
+
+
 
   }
 

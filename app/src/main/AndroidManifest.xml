@@ -13,9 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/action_settings"
+            android:parentActivityName=".MainActivity"
+
+
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/PreferencesTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
         <activity
             android:name=".highscore"
             android:screenOrientation="sensorPortrait" />

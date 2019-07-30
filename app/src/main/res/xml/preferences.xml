@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/action_settings"
 
-    <SwitchPreferenceCompat android:title="Enable Notifications"
-        app:key="notifications"
-        />
-
-    <Preference android:title="Send feedback"
-        android:id="@+id/feedback"
-        android:visibility="visible"
-        app:key="feedback"
-        android:summary="Report technical issues or suggest new features"
-        />
-    <EditTextPreference android:title="Your Name"
-        android:key="username"
-        android:summary="Please provide your username"></EditTextPreference>
-
-    <CheckBoxPreference android:title="Application Updates"
-        android:defaultValue="false"
-        android:summary="This option if selected will allow the application to check for latest versions."
-        android:key="applicationUpdates" />
-    <ListPreference
+    >
+    <SwitchPreference android:title="Dark Theme"
+        app:key="themekey"
+        android:summary="Select to enable a dark theme throughout the app."
+        android:switchTextOff="Light Theme"
+        android:switchTextOn="Dark Theme"
+        android:key="themeSwitcher"
         android:defaultValue="true"
+        />
+
+    <CheckBoxPreference android:title="Enable Cheats"
+        android:summary="You never lose!"
+        android:defaultValue="false"
+        android:key="cheatskey" />
+
+    <ListPreference
+        android:defaultValue="1"
         android:entries="@array/listArray"
         android:entryValues="@array/listValues"
-        android:key="downloadType"
-        android:summary="Select the kind of data that you would like to download"
-        android:title="Download Details" />
+        android:key="packType"
+        android:summary="Select a pack to use"
+        android:title="Select SoundPack"
+
+        />
+        <!--> android:onClick=""
+        Add this when there's an actual method to go to.
+
+        </!-->
+
+
 
 </PreferenceScreen>
